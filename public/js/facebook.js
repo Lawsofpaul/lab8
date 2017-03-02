@@ -22,5 +22,5 @@ function changeUser(response) {
   var username = response['name'];
   $("#name").text(username);
   //var photo = response['url'];
-  $("#photo").attr('src', "https://scontent.xx.fbcdn.net/v/t1.0-1/1013152_685704481447110_582245445_n.jpg?oh=1791105b66cf8301f4b05c1d626c61c2&oe=596A01D3");
+  $("#photo").attr('src', response.picture.data.url);
 }
