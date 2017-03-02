@@ -35,13 +35,14 @@
       <img id="photo" class='img-responsive' src="images/lorempixel.people.1.jpeg" />
     </div>
 
-    <!--
+    
     <div id="camera" class="profile">
       <canvas id="camera-canvas"></canvas>
       <video autoplay id="camera-video"></video>
       <button id="camera-button">Take Photo</button>
+      <button id="camera-change">Change Profile Picture</button>
     </div>
-    -->
+    
 
     <div id="googleMaps" class="profile">
       <h1>Where am I?</h1>
@@ -53,8 +54,19 @@
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="/js/bootstrap.min.js"></script>
   <script src="/js/canvas-to-blob.min.js"></script>
-  <script src="/js/introHCI.js"></script>
+   
+   <script src="/js/introHCI.js"></script>
 
+  {{> facebook}}
+  <script src="/js/facebook.js"></script>
+  {{> googleMaps}}
+  <script src="/js/googleMaps.js"></script>
+  <script src="/js/camera.js"></script>
+
+  <p class="facebookLogin">
+  <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+  </fb:login-button>
+  </p>
 </body>
 </html>
 
